@@ -8,7 +8,7 @@ const FlightCard = () => {
   return (
     <div className="w-full shadow-md bg-white p-5 rounded-xl grid gap-6 grid-cols-4  ">
       {/* price and seats */}
-      <div className="space-y-4 text-center border-r px-2 max-md:text-sm max-md:col-span-4 max-md:order-3">
+      <div className="space-y-4 text-center px-2 max-md:text-sm max-md:col-span-4 max-md:order-3">
         <div className="flex justify-center items-center gap-2">
           <p>ریال</p>
           <p className="text-2xl font-bold text-blue-600 max-md:text-sm">9289000</p>
