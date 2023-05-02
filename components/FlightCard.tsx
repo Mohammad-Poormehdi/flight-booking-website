@@ -11,7 +11,7 @@ const FlightCard = () => {
   console.log(formattedNumber); // Output: "9,289,000"
 
   return (
-    <div className="w-full shadow-md bg-white p-5 rounded-xl grid gap-6 grid-cols-4  ">
+    <div className="w-full shadow-md bg-white p-5 rounded-xl grid gap-6 grid-cols-4 odd:bg-primary even:bg-secondary">
       {/* price and seats */}
       <div className="space-y-4 text-center px-2 max-md:text-sm max-md:col-span-4 max-md:order-3">
         <div className="flex justify-center items-center gap-2">
@@ -46,7 +46,7 @@ const FlightCard = () => {
       {/* logo and airline */}
       <div className="flex justify-center items-center max-md:order-2 ">
         <div className="space-y-3">
-          <Image src={'/images/qeshm.png'} alt="qeshm air log" width={50} height={50} className="rounded-full border" />
+          <Image src={'/images/qeshm.png'} alt="qeshm air log" width={50} height={50} className="rounded-full bg-white border" />
           <p>قشم ایر</p>
         </div>
       </div>
