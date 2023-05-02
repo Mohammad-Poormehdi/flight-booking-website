@@ -2,16 +2,21 @@ import { useRouter } from "next/router";
 import Button from "./Button";
 import Tag from "./Tag";
 import Image from "next/image";
+import {useEffect} from 'react'
 
 const FlightCard = () => {
   const router = useRouter()
+  const number = 9289000;
+  const formattedNumber = number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  console.log(formattedNumber); // Output: "9,289,000"
+
   return (
     <div className="w-full shadow-md bg-white p-5 rounded-xl grid gap-6 grid-cols-4  ">
       {/* price and seats */}
       <div className="space-y-4 text-center px-2 max-md:text-sm max-md:col-span-4 max-md:order-3">
         <div className="flex justify-center items-center gap-2">
           <p>ریال</p>
-          <p className="text-2xl font-bold text-blue-600 max-md:text-sm">9289000</p>
+          <p className="text-2xl font-bold text-blue-600 max-md:text-sm">{formattedNumber}</p>
         </div>
         <Button label="خرید بلیط" active onClick={() => {router.push('/success')}} />
         <div className="flex gap-2 text-sm items-center justify-center">
