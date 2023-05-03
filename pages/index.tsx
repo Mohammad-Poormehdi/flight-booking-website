@@ -98,9 +98,9 @@ const Home = () => {
         <title>رزرو بیگزاده</title>
         <meta name="description" content="سایت رزور بلیط هواپیما بیگزاده" />
       </Head>
-      <div className=" bg-no-repeat bg-cover bg-center h-full">
+      <div className=" bg-no-repeat bg-cover bg-center h-full max-md:h-auto">
         <div
-          className={`flex justify-center items-center ${
+          className={`flex justify-center items-center max-md:h-auto ${
             showFlights ? "h-auto" : "h-1/2"
           } `}
         >
