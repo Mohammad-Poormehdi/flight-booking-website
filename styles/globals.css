@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body,html,main,#__next{
+  @apply h-full
+}
 .background{
   background-image: url('../public/images/background.webp');
 }

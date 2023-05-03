@@ -5,11 +5,12 @@ import Link from "next/link";
 interface SocailMediaCardProps {
   icon: IconType;
   link: string;
+
 }
 const SocialMediaCard: React.FC<SocailMediaCardProps> = ({ icon:Icon, link }) => {
   return (
     <Link href={link}>
-      <div className="w-[200px] h-[200px] bg-secondary flex items-center justify-center rounded-full">
+      <div  className="w-[200px] h-[200px] bg-secondary flex items-center justify-center rounded-full">
         <Icon size={100} />
       </div>
     </Link>

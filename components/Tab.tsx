@@ -4,8 +4,11 @@ const buttons = [
   { label: "خارجی", id: 1 },
   { label: "داخلی", id: 2 },
 ];
-const Tabs = () => {
-  const [activeTab, setActiveTab] = useState("داخلی");
+interface TabsProps {
+  handleShowFlights: (label:string) => void;
+}
+const Tabs: React.FC<TabsProps> = ({ handleShowFlights }) => {
+  const [activeTab, setActiveTab] = useState<string | undefined>();
   const handleActiveTab = useCallback((label: string) => {
     setActiveTab(label);
   }, []);
@@ -18,6 +21,7 @@ const Tabs = () => {
           active={activeTab === button.label}
           onClick={() => {
             setActiveTab(button.label);
+            handleShowFlights(button.label);
           }}
         />
       ))}
