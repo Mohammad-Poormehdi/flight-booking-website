@@ -151,7 +151,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Contact className={showFlights ? 'h-auto' : 'h-1/2'} />
+      <Contact className={showFlights ? 'h-auto' : 'h-1/2 max-md:h-auto'} />
     </div>
   );
 };
