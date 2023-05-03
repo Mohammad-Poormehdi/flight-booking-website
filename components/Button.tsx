@@ -9,7 +9,7 @@ interface ButtonProps{
 
 const Button:React.FC<ButtonProps> = ({className, onClick, label, active})=>{
     return (
-        <button className={` px-3 py-2 rounded-xl w-full ${active ? 'bg-blue-500 text-white' : 'text-black border bg-white'} ${className}`} onClick={onClick}>{label}</button>
+        <button aria-label="button" className={` px-3 py-2 rounded-xl w-full ${active ? 'bg-blue-500 text-white' : 'text-black border bg-white'} ${className}`} onClick={onClick}>{label}</button>
     )
 }
 
